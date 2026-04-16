@@ -7,6 +7,9 @@ import MissionControl from "./../MissionControl .png";
 import bikes from "./../bikes.png";
 import busPlanner from "./../BusPlanner.png";
 import StableappCloud from "./../StableappCloud.png";
+import throttlehaus from "./../ThrottleHaus.png";
+import wmza from "./../wmza.png"
+
 
 const projects = [
   {
@@ -61,6 +64,24 @@ const projects = [
     href: "https://busplanner.com/",
     used: "WordPress Core, CSS3",
     description: "A school bus service platform.",
+    flip: "flip-right",
+  },
+  {
+    id: 8,
+    name: "Throttle Haus",
+    imageSrc: throttlehaus,
+    href: "https://throttlehaus.ca/",
+    used: "WordPress,WooCommerce,PHP,MySQL,Stripe API,Vanilla JS,BEM CSS",
+    description: "Custom WooCommerce theme with advanced product filtering, payment integration.",
+    flip: "flip-right",
+  },
+  {
+    id: 9,
+    name: "WMZA",
+    imageSrc: wmza,
+    href: "https://www.wmza.co.nz/",
+    used: "WordPress,PHP,MySQL,Google Maps API,AJAX,Custom Plugin",
+    description: "Custom real estate plugin and theme with advanced property search, map integration, and mortgage calculator functionality",
     flip: "flip-right",
   },
 ];
