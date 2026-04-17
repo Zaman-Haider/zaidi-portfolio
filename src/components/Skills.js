@@ -37,6 +37,16 @@ const frameWorks = [
     icon: CheckCircleIcon,
   },
   {
+    name: "WordPress",
+    value: 90,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "PHP",
+    value: 90,
+    icon: CheckCircleIcon,
+  },
+  {
     name: "React.js",
     value: 80,
     icon: CheckCircleIcon,
@@ -85,12 +95,7 @@ const frameWorks = [
     name: "Chakra UI",
     value: 60,
     icon: CheckCircleIcon,
-  },
-  {
-    name: "WordPress",
-    value: 60,
-    icon: CheckCircleIcon,
-  },
+  }
 ];
 
 const operatingSystem = [

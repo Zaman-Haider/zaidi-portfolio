@@ -164,13 +164,11 @@ export default function Hero() {
               </div>
               <div className="text-center">
                 <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                  Syed Zaman Haider
+                  Zaman Haider
                 </h1>
                 <p className="mt-6 text-2xl leading-8">
                   <TypeAnimation
                     sequence={[
-                      "I'm a Frontend Developer",
-                      2000,
                       "I'm a Web Developer",
                       2000,
                       "I'm a Full Stack Developer",
@@ -182,8 +180,8 @@ export default function Hero() {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <p>
-                    I am a frontend developer with expertise in React, Angular,
-                    and Vue.js. I build dynamic, responsive, and user-friendly
+                    I am a Fullstack developer with expertise in React,Next.js Angular,
+                    Vue.js, node.js, Wordpress, Shopify I build dynamic, responsive, and user-friendly
                     web applications, focusing on performance and clean code.
                     Passionate about creating seamless user experiences and
                     staying updated with modern technologies to deliver
