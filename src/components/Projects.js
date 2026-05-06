@@ -9,9 +9,20 @@ import busPlanner from "./../BusPlanner.png";
 import StableappCloud from "./../StableappCloud.png";
 import throttlehaus from "./../ThrottleHaus.png";
 import wmza from "./../wmza.png"
+import euphoria from "./../euphoria.png"
+import poezabride from "./../poezabride.png"
 
-
-const projects = [
+const allProjects = [
+  {
+    id: 1,
+    name: "Euphoria ",
+    imageSrc: euphoria ,
+    href: "https://euphoria.com.mx/",
+    used: "ReactJS, GASP, framer Motion",
+    description: "Korean Skincare, K-Beauty, Makeup, Hair Care, Perfumes",
+    flip: "flip-left",
+    category: "fullstack"
+  },
   {
     id: 1,
     name: "Mission Control ",
@@ -20,8 +31,9 @@ const projects = [
     used: "ReactJS, Next.js, Sanity",
     description: "A branding agency and creative capital partner for high-growth startups",
     flip: "flip-left",
+    category: "fullstack"
   },
-  {
+   {
     id: 2,
     name: "ORBYTE-Design & development Studio ",
     imageSrc: orbyte ,
@@ -29,6 +41,17 @@ const projects = [
     used: "ReactJS, Next.js, Sanity, redux",
     description: "Global Design & development Studio",
     flip: "flip-left",
+    category: "fullstack"
+  },
+  {
+    id: 2,
+    name: "Poezabride ",
+    imageSrc: poezabride ,
+    href: "https://poezabride.com/",
+    used: "ReactJS, Nuxt.js, Anime.js, Tailwind CSS",
+    description: "Luxury bridal design brand offering refined gowns with contemporary silhouettes and impeccable craftsmanship. An ode to quiet luxury and elegant simplicity.",
+    flip: "flip-left",
+    category: "fullstack"
   },
   {
     id: 4,
@@ -38,6 +61,7 @@ const projects = [
     used: "ReactJS, TailwindCSS, Styled-components",
     description: "Risk Solved is a global provider of insurance risk engineering management and data analytics software",
     flip: "flip-right",
+    category: "fullstack"
   },
   {
     id: 5,
@@ -47,6 +71,7 @@ const projects = [
     used: "WordPress Core, CSS3",
     description: "Bastion Cycles Manufacturing",
     flip: "flip-left",
+    category: "wordpress"
   },
   {
     id: 6,
@@ -56,6 +81,7 @@ const projects = [
     used: "WordPress Core, CSS3",
     description: "Discover Stable, your go-to solution for AWS cloud savings.",
     flip: "flip-right",
+    category: "wordpress"
   },
   {
     id: 7,
@@ -65,6 +91,7 @@ const projects = [
     used: "WordPress Core, CSS3",
     description: "A school bus service platform.",
     flip: "flip-right",
+    category: "wordpress"
   },
   {
     id: 8,
@@ -74,6 +101,7 @@ const projects = [
     used: "WordPress,WooCommerce,PHP,MySQL,Stripe API,Vanilla JS,BEM CSS",
     description: "Custom WooCommerce theme with advanced product filtering, payment integration.",
     flip: "flip-right",
+    category: "wordpress"
   },
   {
     id: 9,
@@ -83,63 +111,98 @@ const projects = [
     used: "WordPress,PHP,MySQL,Google Maps API,AJAX,Custom Plugin",
     description: "Custom real estate plugin and theme with advanced property search, map integration, and mortgage calculator functionality",
     flip: "flip-right",
+    category: "wordpress"
   },
 ];
+
+// Projects ko categories mein divide karna
+const fullStackProjects = allProjects.filter(p => p.category === "fullstack");
+const wordpressProjects = allProjects.filter(p => p.category === "wordpress");
+
+// Reusable component for project cards
+const ProjectCard = ({ project }) => (
+  <div
+    key={project.id}
+    className="group relative ring-2 ring-base-300 bg-base-200 rounded-2xl shadow-xl"
+    data-aos={
+      project.flip === "flip-left" ? "flip-left" : "flip-right"
+    }
+  >
+    <div className="relative h-64 overflow-y-scroll scrollbar-hide rounded-md rounded-t-2xl">
+      <img
+        src={project.imageSrc}
+        alt={project.name}
+        className="w-full object-contain"
+      />
+
+      <button className="fixed top-[45%] left-[45%] border-2 font-bold text-2xl text-black animate-bounce  border-black rounded-full w-10 h-10">
+        ↓
+      </button>
+    </div>
+
+    <div className="mt-4 flex justify-between p-4">
+      <div className="p-4">
+        <h3 className="text-lg font-bold">
+          <a href={project.href}>
+            <span aria-hidden="true" className="absolute" />
+            {project.name}
+          </a>
+        </h3>
+        <p className="mt-1 mb-5 text-sm">{project.description}</p>
+        <p className="text-sm font-medium">{project.used}</p>
+      </div>
+    </div>
+    <a
+      href={project.href}
+      target="_blank"
+      className="text-sm font-medium absolute right-2 bottom-2 animate-pulse"
+      rel="noreferrer"
+    >
+      Visit Here!
+    </a>
+  </div>
+);
+
+// Category Section Component
+const ProjectSection = ({ title, projects }) => (
+  <div className="mb-16">
+    <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl  mb-8">
+      {title}
+    </h2>
+    <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
+      {projects.map((project) => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
+    </div>
+  </div>
+);
 
 export default function Projects() {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
   return (
     <div id="projects">
       <div className="mx-auto max-w-2xl px-6 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <p className="mt-2 text-4xl text-center font-bold tracking-tight sm:text-6xl underline">
           Browse my recent Projects
         </p>
-        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="group relative ring-2 ring-base-300 bg-base-200 rounded-2xl shadow-xl"
-              data-aos={
-                project.flip === "flip-left" ? "flip-left" : "flip-right"
-              }
-            >
-              <div className="relative h-64 overflow-y-scroll scrollbar-hide rounded-md rounded-t-2xl">
-                <img
-                  src={project.imageSrc}
-                  alt={project.name}
-                  className="w-full object-contain"
-                />
 
-                <button className="fixed top-[45%] left-[45%] border-2 font-bold text-2xl text-black animate-bounce  border-black rounded-full w-10 h-10">
-                  ↓
-                </button>
-              </div>
+        <div className="mt-16">
+          {/* Full Stack Projects Section */}
+          <ProjectSection 
+            title=" Full Stack Projects" 
+            projects={fullStackProjects} 
+          />
 
-              <div className="mt-4 flex justify-between p-4">
-                <div className="p-4">
-                  <h3 className="text-lg font-bold">
-                    <a href={project.href}>
-                      <span aria-hidden="true" className="absolute" />
-                      {project.name}
-                    </a>
-                  </h3>
-                  <p className="mt-1 mb-5 text-sm">{project.description}</p>
-                  <p className="text-sm font-medium">{project.used}</p>
-                </div>
-              </div>
-              <a
-                href={project.href}
-                target="_blank"
-                className="text-sm font-medium absolute right-2 bottom-2 animate-pulse"
-                rel="noreferrer"
-              >
-                Visit Here!
-              </a>
-            </div>
-          ))}
+          {/* WordPress Projects Section */}
+          <ProjectSection 
+            title=" WordPress Projects" 
+            projects={wordpressProjects} 
+          />
         </div>
+
         {/* <div className="mt-16 flex justify-center">
           <button className="btn btn-outline">View More</button>
         </div> */}
