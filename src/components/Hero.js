@@ -191,7 +191,7 @@ export default function Hero() {
                 <div className="mt-10 flex items-center justify-center gap-x-4">
                   {/* Email Button */}
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:syedzamanhaider8@gmail.com"
                     target="_blank"
                     className="btn btn-outline btn-square hover:bg-blue-500 hover:text-white transition-all duration-300"
                     rel="noreferrer"
