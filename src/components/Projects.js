@@ -11,6 +11,7 @@ import throttlehaus from "./../ThrottleHaus.png";
 import wmza from "./../wmza.png"
 import euphoria from "./../euphoria.png"
 import poezabride from "./../poezabride.png"
+import skylights from "./../skylights.png"
 
 const allProjects = [
   {
@@ -62,6 +63,16 @@ const allProjects = [
     description: "Risk Solved is a global provider of insurance risk engineering management and data analytics software",
     flip: "flip-right",
     category: "fullstack"
+  },
+  {
+    id: 5,
+    name: "Skylights",
+    imageSrc: skylights,
+    href: "https://skylights.tech/",
+    used: "WordPress Core, CSS3, MySql",
+    description: "Agency specializing in creating immersive experiences through drone shows, video and laser mapping, lighting design, and high-impact formats.",
+    flip: "flip-left",
+    category: "wordpress"
   },
   {
     id: 5,
