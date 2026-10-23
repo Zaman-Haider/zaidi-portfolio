@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
-import pfp from "./../zaidipic.jpeg";
+import pfp from "./../pfpData";
 import {
   Bars3Icon,
   XMarkIcon,
