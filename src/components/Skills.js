@@ -10,6 +10,11 @@ const core = [
     icon: CheckCircleIcon,
   },
   {
+    name: "TypeScript",
+    value: 75,
+    icon: CheckCircleIcon,
+  },
+  {
     name: "Python",
     value: 80,
     icon: CheckCircleIcon,
@@ -128,8 +133,8 @@ const operatingSystem = [
 
 const otherTechnologies = [
   {
-    name: "GIT",
-    value: 50,
+    name: "Git & GitHub",
+    value: 80,
     icon: CheckCircleIcon,
   },
   {
@@ -165,6 +170,31 @@ const otherTechnologies = [
   {
     name: "AI Automation & LLM Integration",
     value: 85,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "REST APIs",
+    value: 85,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Docker",
+    value: 60,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Redis",
+    value: 55,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Celery",
+    value: 55,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Cloud Deployment (AWS / Vercel)",
+    value: 70,
     icon: CheckCircleIcon,
   },
   {
