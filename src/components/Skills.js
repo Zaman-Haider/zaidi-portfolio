@@ -11,7 +11,7 @@ const core = [
   },
   {
     name: "Python",
-    value: 70,
+    value: 80,
     icon: CheckCircleIcon,
   },
   {
@@ -64,6 +64,21 @@ const frameWorks = [
   {
     name: "Next.js",
     value: 80,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Django",
+    value: 80,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Django REST Framework",
+    value: 75,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "HTMX",
+    value: 70,
     icon: CheckCircleIcon,
   },
   {
@@ -135,6 +150,21 @@ const otherTechnologies = [
   {
     name: "SQL",
     value: 40,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "PostgreSQL",
+    value: 65,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "Claude Code (AI-Assisted Development)",
+    value: 90,
+    icon: CheckCircleIcon,
+  },
+  {
+    name: "AI Automation & LLM Integration",
+    value: 85,
     icon: CheckCircleIcon,
   },
   {

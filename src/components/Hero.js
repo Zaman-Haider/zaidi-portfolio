@@ -173,6 +173,8 @@ export default function Hero() {
                       2000,
                       "I'm a Full Stack Developer",
                       2000,
+                      "I'm an AI-Assisted Developer",
+                      2000,
                     ]}
                     speed={50}
                     repeat={Infinity}
@@ -181,8 +183,11 @@ export default function Hero() {
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <p>
                     I am a Fullstack developer with expertise in React, Next.js, Angular,
-                    Vue.js, node.js, Wordpress, Shopify. I build dynamic, responsive, and user-friendly
+                    Vue.js, node.js, Python, Django, Wordpress, Shopify. I build dynamic, responsive, and user-friendly
                     web applications, focusing on performance and clean code.
+                    I also develop AI-assisted — building production software with Claude Code
+                    and modern LLM tools, breaking specs into small tasks, reviewing every
+                    change, and shipping in tested pull requests.
                     Passionate about creating seamless user experiences and
                     staying updated with modern technologies to deliver
                     high-quality solutions.
